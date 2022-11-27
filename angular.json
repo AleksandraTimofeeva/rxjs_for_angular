@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -75,7 +76,8 @@
               "browserTarget": "rxjs_for_angular:build:production"
             },
             "development": {
-              "browserTarget": "rxjs_for_angular:build:development"
+              "browserTarget": "rxjs_for_angular:build:development",
+              "proxyConfig": "proxy.config.json"
             }
           },
           "defaultConfiguration": "development"

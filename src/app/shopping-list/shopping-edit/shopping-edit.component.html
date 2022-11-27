@@ -1,0 +1,21 @@
+<div class="row">
+  <form #form="ngForm" (ngSubmit)="addElement(form)">
+    <div class="col-md-12">
+        <input type="text"
+               id="name"
+               placeholder="Name"
+               name="name"
+               ngModel
+               class="form-control my-4">
+    </div>
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-success">{{editMode?'Редактировать':'Добавить'}}</button>
+      <button
+        type="button"
+        class="btn btn-danger mx-2"
+        *ngIf="editMode"
+        (click)="deleteElement()">Удалить</button>
+      <button type="button" class="btn btn-secondary" (click)="clearElements()">Очистить</button>
+    </div>
+  </form>
+</div>

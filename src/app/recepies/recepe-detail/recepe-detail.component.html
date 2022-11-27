@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-12 my-2">
+    <h1>{{recipe.name}}</h1>
+  </div>
+  <div class="col-md-12">
+    <button class="btn btn-danger mr-2" (click)="onDelete()">В корзину</button>
+    <button class="btn btn-info" [routerLink]="['edit']">Редактировать</button>
+  </div>
+  <div class="col-md-12 my-4">
+    <a class="list-group-item">
+      <p class="mb-0"
+         *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}</p>
+    </a>
+  </div>
+</div>
